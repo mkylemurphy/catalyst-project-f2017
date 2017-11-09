@@ -1,0 +1,7 @@
+<ul>
+{% for event in events %}
+    <li>{{ event.name }}</li>
+    <li>{{ event.info }}</li>
+    <li>{{ event.start_time }}</li>
+{% endfor %}
+</ul>
