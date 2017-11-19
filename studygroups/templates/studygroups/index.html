@@ -1,7 +1,10 @@
-<ul>
 {% for event in events %}
-    <li>{{ event.name }}</li>
-    <li>{{ event.info }}</li>
-    <li>{{ event.start_time }}</li>
-{% endfor %}
+<h1>{{ event.name }}</h1>
+<ul>
+	<li> info: h{{ event.info }}</li>
+	<li> location: h{{ event.location }}</li>
+	<li> starts: {{ event.start_time }}</li>
+	<li> ends: {{ event.end_time }}</li>
+	<li> date: {{ event.date }}</li>
 </ul>
+{% endfor %}

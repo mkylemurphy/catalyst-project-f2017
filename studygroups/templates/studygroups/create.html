@@ -1,0 +1,51 @@
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+	<form action="{% url 'create' %}" method="post">
+	    {% csrf_token %}
+	    {{ form.non_field_errors }}
+	    <h1>Create Event</h1>
+
+	    <div class="form-group">
+		{{ form.name.errors }}
+		<label for="{{ form.name.id_for_label }}">Name: </label>
+		{{ form.name }}
+	    </div>
+
+
+	    <div class="form-group">
+		{{ form.info.errors }}
+		<label for="{{ form.info.id_for_label }}">Info: </label>
+		{{ form.info }}
+	    </div>
+
+	    <div class="form-group">
+		{{ form.location.errors }}
+		<label for="{{ form.location.id_for_label }}">Location: </label>
+		{{ form.location }}
+	    </div>
+
+
+	    <div class="form-group">
+		{{ form.date.errors }}
+		<label for="{{ form.date.id_for_label }}">Date: </label>
+		{{ form.date }}
+	    </div>
+
+
+	    <div class="form-group">
+		{{ form.start_time.errors }}
+		<label for="{{ form.start_time.id_for_label }}">Start Time: </label>
+		{{ form.start_time }}
+	    </div>
+
+
+	    <div class="form-group">
+		{{ form.end_time.errors }}
+		<label for="{{ form.end_time.id_for_label }}">End Time: </label>
+		{{ form.end_time }}
+	    </div>
+
+	    <button type="submit" class="btn btn-primary">Add to cart!</button>
+	</form>
+    </div>
+</div>
